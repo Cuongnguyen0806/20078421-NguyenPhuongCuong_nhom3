@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #email{
+            margin-left: 50px;
+        }
+        #message1{
+            margin-left: 55px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Contact Us</h1>
+        <p>Use the following form to send a message to Example Cafe</p><br>
+        <fieldset>
+            <legend>Your message:</legend>
+            <table>
+                <tr>
+                    <td><label for="email">Your email:</label></td>
+                    <td><input type="text" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="message" id="message">message:</label></td>
+                    <td><textarea name="message" id="message1" cols="80" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="chon">How đi you hear of us?</label></td>
+                    <td><select name="chon" id="chon">
+                        <option value="item1">item1</option>
+                        <option value="item2">item2</option>
+                        <option value="item3">item3</option>
+                    </select></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>check</legend>
+            <table>
+                <tr>
+                    <td><label for="abc">Newsletter</label></td>
+                    <td><input type="checkbox"></td>
+                    <td><label for="abd">Ensure this box is checked if you would like to receive email updates</label></td>
+                </tr>
+                <tr>
+                    <td> <input type="button" value="Send Message"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</body>
+</html>

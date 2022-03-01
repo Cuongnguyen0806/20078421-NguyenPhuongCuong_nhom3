@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: auto;
+        }
+        .wrapper{
+            height: 700px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+        header{
+            height: 150px;
+            width: 1089px;
+            background-color: azure;
+        }
+        .content{
+            height: 300px;
+            width: 1089px;
+            background-color: aqua;
+        }
+        footer{
+            height: 200px;
+            width: 1089px;
+            background-color: blue;
+        }
+        aside{
+            height: 100%;
+            width: 40%;
+            background-color: brown;
+            float: left;
+        }
+        section{
+            height: 100%;
+            width: 60%;
+            background-color: rgb(100, 148, 132);
+            float: right;
+        }
+        .menu li{
+            height: 100%;
+            width: 200px;
+            float: left;
+            list-style-type: none;
+            line-height: 50px;
+            text-indent: 15px;
+            position: relative; 
+        }
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: red;
+        }
+        .menu li:hover{
+            background-color: yellow;
+        }
+        li:hover>a{
+            font-style: italic;
+            font-weight: bold;
+            color: rgb(95, 95, 42);
+        }
+        .menu li .submenu{
+            display: none;
+            position: absolute;
+        }
+        .menu li:hover .submenu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header></header>
+        <nav>
+            <ul class="menu">
+                <li><a href="https://www.24h.com.vn/">Item1</a></li>
+                <li><a href="">Item 2</a></li>
+                <li><a href="">Item 3</a></li>
+                <li><a href="">Item 4</a>
+                    <ul class="submenu">
+                        <li><a href="">Item 4.1</a></li>
+                        <li><a href="">Item 4.2</a></li>
+                        <li><a href="">Item 4.3</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Item 5</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <aside>
+                <article>
+
+                </article>
+            </aside>
+            <section>
+                <article>
+
+                </article>
+            </section>
+        </div>
+        <footer>
+        </footer>
+    </div>
+</body>
+</html>
