@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: auto;
+        }
+        body{
+            background-image: url(./hinh-anh-dep-thien-nhien.jpg);
+        }
+        .wrapper{
+            height: 550px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+        header{
+            height: 150px;
+            width: 1089px;
+            background-color: azure;
+            background-image: url(./Hình-ảnh-phong-cảnh-yên-bình.jpg);
+        }
+        .wrapper header p{
+            text-align: center;
+            font-size: 50px;
+            text-shadow: 10px 20px 20px red;
+            line-height: 50px;
+        }
+        .wrapper header:hover p{
+            transform: rotate(20deg);
+        }
+        .content{
+            height: 300px;
+            width: 1089px;
+            background-color: rgb(165, 218, 218);
+        }
+        footer{
+            height: 200px;
+            width: 1089px;
+            background-color: blue;
+            background-image: url(./5e21dacde310d6d13ad78d834345a9bf.jpg);
+        }
+        aside{
+            height: 100%;
+            width: 40%;
+            background-color: brown;
+            float: left;
+        }
+        section{
+            height: 100%;
+            width: 60%;
+            background-color: rgb(100, 148, 132);
+            float: right;
+        }
+        .menu li{
+            height: 100%;
+            width: 200px;
+            float: left;
+            list-style-type: none;
+            line-height: 50px;
+            text-indent: 15px;
+            position: relative; 
+        }
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: red;
+        }
+        .menu li:hover{
+            background-color: yellow;
+        }
+        li:hover>a{
+            font-style: italic;
+            font-weight: bold;
+            color: rgb(95, 95, 42);
+        }
+        .menu li .submenu{
+            display: none;
+            position: absolute;
+        }
+        .menu li:hover .submenu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <p>du lịch</p>
+        </header>
+        <nav>
+            <ul class="menu">
+                <li><a href="https://www.24h.com.vn/">Item1</a></li>
+                <li><a href="">Item 2</a></li>
+                <li><a href="">Item 3</a></li>
+                <li><a href="">Item 4</a>
+                    <ul class="submenu">
+                        <li><a href="">Item 4.1</a></li>
+                        <li><a href="">Item 4.2</a></li>
+                        <li><a href="">Item 4.3</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Item 5</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <aside>
+                <article>
+                    <h2>PHONG CANH 1</h2>
+                    <img src="./anh-nen-phong-canh-suoi_105621119.jpeg" alt="">
+                </article>
+            </aside>
+            <section>
+                <article>
+                    <form action="dangky.php" method="post">
+                        <fieldset>
+                            <legend>thông tin đăng kí của bạn</legend>
+                            <label for="lblhoten">Họ Tên :</label>
+                            <input type="text" name="txtHoTen" id="txtHoTen" required placeholder="Nhập họ tên" minlength="20"><br><br>
+                            <label for="lblgioitinh">Gioi Tinh:</label>
+                            <input type="radio" name="radnam" id="radnam" value="nam">
+                            <label for="">nam</label>
+                            <input type="radio" name="radnu" id="radnu" value="nu">
+                            <label for="">nu</label><br><br>
+                            <label for="ngaysinh">ngày sinh</label>
+                            <input type="date" name="txtDate" id="txtDate" required placeholder="ngay sinh" minlength="20" pattern="dd/MM/yyyy"><br><br>
+                            <input type="submit" value="GO">
+                        </fieldset>
+                    </form>
+                    <form action="dangnhap.php" method="post">
+                        <fieldset>
+                            <legend>đăng nhập email</legend>
+                            <label for="lblemail">Email:</label>
+                            <input type="email" name="email" id="email" required placeholder="nhập email" minlength="20"><br><br>
+                            <label for="lblpassword">Password:</label>
+                            <input type="password" name="password" id="password" required placeholder="nhập password" minlength="20"><br><br>
+                            <input type="submit" value="Đăng Nhập">
+                        </fieldset>
+                    </form>
+
+                </article>
+            </section>
+        </div>
+        <footer>
+            <h2>Phong Canh 2</h2>
+        </footer>
+    </div>
+</body>
+</html>
