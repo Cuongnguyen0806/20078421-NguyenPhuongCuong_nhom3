@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="../css/myStyle.css"> -->
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/CK - Copy.js"></script>
+        <!-- <script src="../js/main.js"></script> -->  
+    </head>
+<body>
+    <!-- Header -->
+    <div>  
+        <header>
+            <div class="col-md-12" style="background-color: rgb(73, 160, 47);" >
+                <div class="col-md-6">
+                    <nav class="navbar-collapse ">
+                        <ul class="navbar-nav nav " style="margin-top: 10px;">
+                            <li style="margin-top: -15px;"><a href="../html/Home.html" id="dn"><img src="../image/logoNho.jpg" alt=""></a></li>
+                            <li> <a class="dropdown-toggle" data-toggle="dropdown" style="color:black;"><img src="../image/product.png" alt="">Sản Phẩm
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu ">
+                                  <li class="bg-danger" ><a href="home.html">PC</a></li>
+                                  <li class="bg-danger"><a href="LapTop.html">LapTop</a></li>
+                                </ul></li>
+                            <li><a href="../html/GioiThieu.html" target="_blank" style="color: black;"><img src="../image/introduct.png" alt="">Giới thiệu</a></li>
+                            <li><a href="../html/ContactPC.html" target="_blank" style="color: black;"><img src="../image/contact.png" alt="">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6 float-sm-right form-group">
+                    <nav style="float: right;" class="navbar-collapse">
+                        <ul class="navbar-nav nav "style="margin-top: 10px;">
+                            <li style="margin-top: 10px;"><form class="form-inline float-sm-right">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="../image/search.png" alt=""></button>
+                            </form>
+                            </li>
+                            <li><a href="../html/DangKyPC.html" target="_blank" id="dn" style="color: black;"><img src="../image/register.png" alt="">Đăng ký</a></li>
+                            <li><a href="#" id="btnLogIn" style="color: black;"><img src="../image/login.png" alt="">Đăng nhập</a></li>
+                            <li><a href="GioHangPC.html" target="_blank" id="btnShop" style="color: black;" target="blank"><img src="../image/shop.png" alt="">Giỏ hàng</a></li>
+                        </ul>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div style="background-color: black; color: aliceblue;">
+                <nav class="navbar-collapse">
+                    <ul class="navbar-nav nav" style="font-size: 20px;">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="PC.html">PC</a></li>
+                        <li><a href="PCGamingDesign.html">PC Gaming</a></li>
+                        <li><a href="LapTop.html">Lap top</a></li>
+                        <!-- <li><a href="home.html">PC DELL</a></li>
+                        <li><a href="home.html">PC HP</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <!-- Body -->
+    <div class="container">
+        <div style="margin-top: 100px;">
+            <h1 class="text-center">ĐĂNG KÝ</h1>
+        </div>
+         <div>
+             <form>
+                 <div class="form-group">
+                     <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                 </div>
+                 <div class="form-group">
+                     <label for="txtUserNameRegister" class="control-label col-md-3">UserName</label>
+                     <div class="col-md-9">
+                         <input type="text" class="form-control" id="txtUserNameRegister" placeholder="UserName">
+                         <span id="tbUserNameRegister" class="text-danger">*</span>
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <label for="txtPassRegister" class="control-label col-xs-3">PassWord</label>
+                     <div class="col-md-9">
+                         <input type="password" class="form-control" id="txtPassRegister" placeholder="PassWord">
+                         <span id="tbPassRegister" class="text-danger">*</span>
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <label for="txtPassConfirm" class="control-label col-xs-3">Confirm PassWord</label>
+                     <div class="col-md-9">
+                         <input type="password" class="form-control" id="txtPassConfirm" placeholder="ConfirmPassWord">
+                         <span id="tbPassConfirm" class="text-danger">*</span>
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <label for="txtEmailRegister" class="control-label col-xs-3">Email</label>
+                     <div class="col-md-9">
+                         <input type="text" class="form-control" id="txtEmailRegister" >
+                         <span id="tbEmailRegister" class="text-danger">*</span>
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <label for="txtPhoneRegister" class="control-label col-xs-3">Phone</label>
+                     <div class="col-md-9">
+                         <input type="text" class="form-control" id="txtPhoneRegister" placeholder="0-XXXXXXXXX">
+                         <span id="tbPhoneRegister" class="text-danger">*</span>
+                     </div>
+                 </div>
+                 <button type="submit" class="btn btn-success btn-lg btn-block" id="btndangky">Đăng ký</button><br>
+             </form>
+         </div>
+    </div>
+    <!-- Footer -->
+    <div class="col-md-12">
+        <footer>
+            <div class="col-md-12" style="background-color: rgb(73, 160, 47);color: black;text-align: center;">  
+                    <h3>VỀ CHÚNG TÔI</h3>
+                    <hr style="height:3px;border:none;color:#333;background-color:#333;" />
+                    <p>Shop Máy Tính Giá Rẻ C&T</p>
+                    <p>Hotline: 035.543.5331</p>
+                    <p>Địa chỉ: 12 Nguyễn Văn Bảo - Phường 4 - Quận Gò Vấp - TP.HCM</p>
+                    <hr style="height:3px;border:none;color:#333;background-color:#333;" />
+                    <p>Copyright 2022 © Thiết kế Website bởi: Nguyễn Phương Cường & Nguyễn Thị Phương Thảo</p>
+            </div>        
+        </footer>
+    </div>
+
+    <div class="modal fade" id="logInModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="text-align: center;">Log In</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtUserName" class="control-label col-xs-3">UserName</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="txtUserName" placeholder="UserNamme">
+                                <span id="tbUserName" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass" class="control-label col-xs-3">PassWord</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="txtPass" placeholder="PassWord">
+                                <span id="tbPass" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg btn-block" id="btndangnhap">Đăng nhập </button> 
+                    </form>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="../css/myStyle.css"> -->
+    
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/CK - Copy.js"></script>
+        <link rel="stylesheet" href="../css/productintro.css">
+        <!-- <script src="../js/main.js"></script> -->
+        <style>
+            body{
+            background-color: azure;
+        }
+        .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+        .dropdown{
+   position: relative;
+   display: inline-block;
+        }
+   .dropdown-content{
+   display: none;
+   position: absolute;
+   background-color: #2891f3;
+   z-index: 1;
+   list-style: none;
+}
+
+.dropdown:hover .dropdown-content{
+   display: block;
+}   
+    th{
+        background-color: aqua;
+        border: 1px solid black;
+    }
+        </style>
+        <script>
+    
+            let i = 0
+    
+            let sp1 = {tensp:"MÁY TÍNH OFFICE GIÁ RẺ 14", hinhanh:"../image/PC/may-tinh-office-gia-re-14-677-1.jpg", soluong:1, dongia:9300000}
+            let sp2 = {tensp:"MÁY TÍNH WORKSTATION INTEL XEON E5-2673 V3 02", hinhanh:"../image/PC/may-tinh-workstation-intel-xeon-e5-2673-v3-02-669-1.jpg", soluong:1, dongia:22900000}
+            let sp3 = {tensp:"LAPTOP CHÍNH HÃNG DELL INSPIRON 14 5402", hinhanh:"../image/LAPTOP/laptop-chinh-hang-dell-inspiron-14-5402-582-1.jpg", soluong:1, dongia:20900000}
+            let sp4 = {tensp:"MÁY TÍNH WORKSTATION INTEL XEON E5-2670 V2", hinhanh:"../image/PC_Gaming/may-tinh-workstation-dual-xeon-e5-2670-v2-663-1.jpg", soluong:1, dongia:20200000}
+            let sp5 = {tensp:"LAPTOP CHÍNH HÃNG DELL VOSTRO 3510 I3", hinhanh:"../image/LAPTOP/laptop-chinh-hang-dell-vostro-3510-i3-584-1.jpg", soluong:1, dongia:15500000}  
+            let sp6 = {tensp:"MÁY TÍNH WORKSTATION INTEL XEON E5-2689", hinhanh:"../image/PC_Gaming/may-tinh-workstation-intel-xeon-e5-2689-661-1.jpg", soluong:1, dongia:14820000}
+           
+    
+            let dssp = [sp1, sp2, sp3, sp4, sp5,sp6]
+    
+    
+            function napDSSP(dssp){
+                dssp.forEach(sp => {
+                    let row = "<tr><td class='text-center'>"+(++i)+"</td><td>"+sp.tensp+"</td><td><img src='"+sp.hinhanh+"' width='150' alt='Hinh anh'></td><td contenteditable='true' onkeyup='getTongtien()'>"+sp.soluong+"</td><td class='text-right'>"+sp.dongia+"</td></tr>"
+
+                    let myTable = document.getElementById("tbl")
+    
+                    let newRow = myTable.insertRow(myTable.rows.length)
+    
+                    newRow.innerHTML  = row
+    
+                });
+            }
+    
+            function getTongtien(){
+                let tongtien = 0
+                let myTable = document.getElementById("tbl")
+                let rows = myTable.rows.length
+    
+                for(let i = 0; i < rows; i++){
+                    let soluong = myTable.rows[i].cells[3].innerHTML
+                    let dongia = myTable.rows[i].cells[4].innerHTML
+                    let thanhtien = soluong * dongia
+                    tongtien += thanhtien
+                }
+    
+                document.getElementById("total").innerHTML = tongtien
+                txtTongTien.innerHTML=tongtien
+            }
+            
+            window.onload = function(){
+                napDSSP(dssp)
+                getTongtien()
+            }
+    
+        </script>
+    
+    </head>
+<body>
+    <!-- Header -->
+    <div>  
+        <header>
+            <div class="col-md-12" style="background-color: rgb(73, 160, 47);" >
+                <div class="col-md-6">
+                    <nav class="navbar-collapse ">
+                        <ul class="navbar-nav nav " style="margin-top: 10px;">
+                            <li style="margin-top: -15px;"><a href="../html/Home.html" id="dn"><img src="../image/logoNho.jpg" alt=""></a></li>
+                            <li> <a class="dropdown-toggle" data-toggle="dropdown" style="color:black;"><img src="../image/product.png" alt="">Sản Phẩm
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu ">
+                                  <li class="bg-danger" ><a href="home.html">PC</a></li>
+                                  <li class="bg-danger"><a href="LapTop.html">LapTop</a></li>
+                                </ul></li>
+                            <li><a href="../html/GioiThieu.html" target="_blank" style="color: black;"><img src="../image/introduct.png" alt="">Giới thiệu</a></li>
+                            <li><a href="../html/ContactPC.html" target="_blank" style="color: black;"><img src="../image/contact.png" alt="">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6 float-sm-right form-group">
+                    <nav style="float: right;" class="navbar-collapse">
+                        <ul class="navbar-nav nav "style="margin-top: 10px;">
+                            <li style="margin-top: 10px;"><form class="form-inline float-sm-right">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="../image/search.png" alt=""></button>
+                            </form>
+                            </li>
+                            <li><a href="../html/DangKyPC.html" target="_blank" id="dn" style="color: black;"><img src="../image/register.png" alt="">Đăng ký</a></li>
+                            <li><a href="#" id="btnLogIn" style="color: black;"><img src="../image/login.png" alt="">Đăng nhập</a></li>
+                            <li><a href="GioHangPC.html" target="_blank" id="btnShop" style="color: black;" target="blank"><img src="../image/shop.png" alt="">Giỏ hàng</a></li>
+                        </ul>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div style="background-color: black; color: aliceblue;">
+                <nav class="navbar-collapse">
+                    <ul class="navbar-nav nav" style="font-size: 20px;">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="PC.html">PC</a></li>
+                        <li><a href="PCGamingDesign.html">PC Gaming</a></li>
+                        <li><a href="LapTop.html">Lap top</a></li>
+                        <!-- <li><a href="home.html">PC DELL</a></li>
+                        <li><a href="home.html">PC HP</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="thongtin1">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <img style="width: 100%" src="../image/MAYTINH/may-tinh-workstation-intel-xeon-e5-2673-v3-664-1.jpg" alt="" id="imga">
+                <h3 style="text-align: center;">Máy Tính Workstation Intel Xeon E5-2673 V3</h3>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <h3><b>THÔNG SỐ CẤU HÌNH</b></h3>
+                <table>
+                    <tr>
+                        <th>CPU</th>
+                        <td>Intel Xeon E5-2673 V3 (2.40GHz, 12 Nhân 24 Luồng)</td>
+                    </tr>
+                    <tr>
+                        <th>MAIN</th>
+                        <td>X99 LGA 2011-3</td>
+                    </tr>
+                    <tr>
+                        <th>RAM</th>
+                        <td>ECC 32G Bus 2133 Registered</td>
+                    </tr>
+                    <tr>
+                        <th>SSD</th>
+                        <td>HIK 256G PCIe M.2</td>
+                    </tr>
+                    <tr>
+                        <th>VGA</th>
+                        <td>GTX 1650 4GB</td>
+                    </tr>
+                    <tr>
+                        <th>LCD</th>
+                        <td>AOC 22 Inch 75Hz 22B2</td>
+                    </tr>
+                    <tr>
+                        <th>Nguồn</th>
+                        <td>PSU Segotep Q7 500W Fan 12</td>
+                    </tr>
+                    <tr>
+                        <th>CASE</th>
+                        <td>Jetek R22 Black Led + Tản khí CR 1000</td>
+                    </tr>
+                    <tr>
+                        <th>Bảo Hành:</th>
+                        <td>12 Tháng</td>
+                    </tr>
+                    <tr>
+                        <th>Qua tặng:  </th>
+                        <td>Phím Bosston giả cơ chuột FD + ổ điện</td>
+                    </tr>
+                </table>
+                <div class="thongtinmaytinh">
+                    <h3 style="text-align: center; color: brown;">MÁY TÍNH WORKSTATION INTEL XEON E5-2673 V3</h3>
+                <hr style="border-color: steelblue;">
+                <div class="thongtindathang">
+                    <h4 style="text-align: center;">MSP: MTWXE573</h4>
+                    <div class="uudai" style="float: left; border: 1px solid brown; background-color: antiquewhite;">
+                        <h4 style="text-align: center; color: brown;">NHẬN NGAY ƯU ĐÃI</h4>
+                        <p>Tặng bàn phím chính hãng <br> Tặng chuột chính hãng <br> Tặng lót chuột <br> Tặng ổ điện</p>
+                    </div>
+                    <div class="giaohang" style="float: right;">
+                        <div class="giaohang1" style="background-color: antiquewhite; border: 1px solid brown;">
+                            <h5>MIỄN PHÍ GIAO HÀNG 8H - 17H</h5>
+                        </div>
+                        <div class="giaohang2" style="background-color: antiquewhite; border: 1px solid brown;">
+                            <h5>MIỄN PHÍ LẮP - CÀI ĐẶT PHẦN MỀM</h5>
+                        </div>
+                        <div class="giaohang3" style="background-color: antiquewhite; border: 1px solid brown;">
+                            <h5>BẢO HÀNH 1 ĐỔI 1 NHANH CHÓNG</h5>
+                        </div>
+                        <div class="giaohang4" style="background-color: antiquewhite; border: 1px solid brown;">
+                            <h5>CAM KẾT GIÁ TỐT NHẤT THỊ TRƯỜNG</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="gia" style="clear: both; float: left;">
+                    <h3>GIÁ TRỌN BỘ: <p style="color: red; text-align: center">21.500.000</p></h3>
+                </div>
+                <div class="mua">
+                    <button class="btn btn-block btn-success" id="btndathang">Tiến hành đặt hàng:</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <h3 style="text-align: center; color: brown;">SẢN PHẨM LIÊN QUAN</h3>
+                <hr style="border-color: steelblue;">
+                <div class="row">
+                    <div class="col-sm-3 col-md-6 justify-content-center"> 
+                        <!-- <h4 class="text-center" style="color: rgb(5, 114, 47);"><bold>MÁY TÍNH WORKSTATION INTEL XEON E5-2673 V3</bold></h4> -->
+                        <div class="products"> <a href="thongtin1.html"><img style="width: 100%" src="../image/MAYTINH/may-tinh-workstation-intel-xeon-e5-2673-v3-664-1.jpg" alt="" id="imga"></a>
+                            <h5 class="text-center" style="color: rgb(5, 114, 47);" id="tenn">MÃ: MTWXE573</h5> <br>
+                            <h5 class="text-center" style="color: rgb(5, 114, 47);">Intel Xeon E5-2673 V3 (2.40GHz, 12 Nhân 24 /Luồng)</h5>
+                            <h3 class="text-center" style="color: rgb(224, 61, 20);" id="gia">  21.500.000đ </h3>
+                            <button type="button" id="Mua_intel-E5-2673">Mua ngay</button>
+                            <button type="button" id="TG_intel-E5-2673">Trả góp</button>
+                        </div>
+                        <div class="products"> <a href="thongtin2.html"><img style="width: 100%" src="../image/MAYTINH/may-tinh-workstation-dual-xeon-e5-2670-v2-663-1.jpg" alt="" id="imga"></a> 
+                            <h5 class="text-center" style="color: rgb(5, 114, 47);" id="tenn">MÃ: MTWDX70</h5> <br>
+                            <h5 class="text-center" style="color: rgb(5, 114, 47);">Dual Xeon E5-2670 V2 ( 20 Nhân 40 Luồng)/X79 LGA 2011</h5>
+                            <h3 class="text-center" style="color: rgb(224, 61, 20);" id="gia">28.400.000đ</h3>
+                            <button type="button" id="Mua_intel-E5-2673">Mua ngay</button>
+                            <button type="button" id="TG_intel-E5-2673">Trả góp</button>
+                        </div>
+                        <div class="products"> <a href="thongtin3.html"><img style="width: 100%" src="../image/MAYTINH/pc-van-phong-intel-core-i3-10th-553-1.jpg" alt="" id="imga"></a>
+                            <h5 class="text-center" style="color: rgb(5, 114, 47);" id="tenn">MÃ: PCVPI310</h5> <br>
+                            <h5 class="text-center" style="color: rgb(5, 114, 47);">Core i3-10100 3.6G / 6MH410 Chipset Intel/PC4 8G Bus 2666/SSD 128GB</h5>
+                            <h3 class="text-center" style="color: rgb(224, 61, 20);" id="gia">6.970.000đ</h3>
+                            <button type="button" id="Mua_intel-E5-2673">Mua ngay</button>
+                            <button type="button" id="TG_intel-E5-2673">Trả góp</button>
+                    </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <footer class="container-fluid" style="background-color: rgb(73, 160, 47);color: black; text-align: center;">
+        <div class="col-md-12">
+            <h3>VỀ CHÚNG TÔI</h3>
+            <hr style="height:3px;border:none;color:#333;background-color:#333;" />
+            <p>Shop Máy Tính Giá Rẻ C&T</p>
+            <p>Hotline: 035.543.5331</p>
+            <p>Địa chỉ: 12 Nguyễn Văn Bảo - Phường 4 - Quận Gò Vấp - TP.HCM</p>
+            <hr style="height:3px;border:none;color:#333;background-color:#333;" />
+            <p>Copyright 2022 © Thiết kế Website bởi: Nguyễn Phương Cường & Nguyễn Thị Phương Thảo</p>
+        </div>      
+    </footer>
+    <div class="modal fade" id="logInModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="text-align: center;">Log In</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtUserName" class="control-label col-xs-3">UserName</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="txtUserName" placeholder="UserNamme">
+                                <span id="tbUserName" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass" class="control-label col-xs-3">PassWord</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="txtPass" placeholder="PassWord">
+                                <span id="tbPass" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg btn-block" id="btndangnhap">Đăng nhập</button> 
+                    </form>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="nhanhang" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="text-align: center;">THÔNG TIN KHÁCH HÀNG NHẬN HÀNG</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txthoten" class="control-label col-xs-3">HỌ TÊN</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="txthoten" placeholder="họ tên">
+                                <span id="tbhoten" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass" class="control-label col-xs-3">Địa chỉ</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="txtdiachi" placeholder="Địa chỉ">
+                                <span id="tbdiachi" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass" class="control-label col-xs-3">Giới Tính:</label>
+                            <div class="col-md-9">
+                            <div class="select">
+                            <input type="radio" name="gender" id="male" value="nam" checked />
+                            <label for="male">Nam</label>
+                            <input type="radio" name="gender" id="female" value="nu" />
+                            <label for="famale">Nữ</label><br>
+                            </div>
+                            </div>  
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass" class="control-label col-xs-3">Số điện thoại</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="txtsodienthoai" placeholder="số điện thoại">
+                                <span id="tbsodienthoai" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass" class="control-label col-xs-3">email</label>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" id="txtgmail" placeholder="email">
+                                <span id="tbgmail" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg btn-block" id="btndkynhanhang">Đặt Hàng</button> 
+                    </form>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

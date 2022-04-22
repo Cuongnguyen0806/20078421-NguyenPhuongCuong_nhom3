@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/">
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/CK - Copy.js"></script>
+        <link rel="stylesheet" href="../css/productintro.css">
+    </head>
+    <style>
+        body{
+            background-color: azure;
+        }
+        .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+        .dropdown{
+   position: relative;
+   display: inline-block;
+        }
+   .dropdown-content{
+   display: none;
+   position: absolute;
+   background-color: #2891f3;
+   z-index: 1;
+   list-style: none;
+}
+
+.dropdown:hover .dropdown-content{
+   display: block;
+}
+    </style>
+<body>
+    <!-- Header -->
+    <div>  
+        <header>
+            <div class="col-md-12" style="background-color: rgb(73, 160, 47);" >
+                <div class="col-md-6">
+                    <nav class="navbar-collapse ">
+                        <ul class="navbar-nav nav " style="margin-top: 10px;">
+                            <li style="margin-top: -15px;"><a href="../html/Home.html" id="dn"><img src="../image/logoNho.jpg" alt=""></a></li>
+                            <li> <a class="dropdown-toggle" data-toggle="dropdown" style="color:black;"><img src="../image/product.png" alt="">Sản Phẩm
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu ">
+                                  <li class="bg-danger" ><a href="home.html">PC</a></li>
+                                  <li class="bg-danger"><a href="LapTop.html">LapTop</a></li>
+                                </ul></li>
+                            <li><a href="../html/GioiThieu.html" target="_blank" style="color: black;"><img src="../image/introduct.png" alt="">Giới thiệu</a></li>
+                            <li><a href="../html/ContactPC.html" target="_blank" style="color: black;"><img src="../image/contact.png" alt="">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6 float-sm-right form-group">
+                    <nav style="float: right;" class="navbar-collapse">
+                        <ul class="navbar-nav nav "style="margin-top: 10px;">
+                            <li style="margin-top: 10px;"><form class="form-inline float-sm-right">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="../image/search.png" alt=""></button>
+                            </form>
+                            </li>
+                            <li><a href="../html/DangKyPC.html" target="_blank" id="dn" style="color: black;"><img src="../image/register.png" alt="">Đăng ký</a></li>
+                            <li><a href="#" id="btnLogIn" style="color: black;"><img src="../image/login.png" alt="">Đăng nhập</a></li>
+                            <li><a href="GioHangPC.html" target="_blank" id="btnShop" style="color: black;" target="blank"><img src="../image/shop.png" alt="">Giỏ hàng</a></li>
+                        </ul>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div style="background-color: black; color: aliceblue;">
+                <nav class="navbar-collapse">
+                    <ul class="navbar-nav nav" style="font-size: 20px;">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="PC.html">PC</a></li>
+                        <li><a href="PCGamingDesign.html">PC Gaming</a></li>
+                        <li><a href="LapTop.html">Lap top</a></li>
+                        <!-- <li><a href="home.html">PC DELL</a></li>
+                        <li><a href="home.html">PC HP</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+      <hr style="height:3px;border:none;color:#333;background-color:#333;" />
+    <div class="container">
+        <h2>Laptop:</h2>
+          <div class="row"> 
+                <div class="col-sm-7 col-md-3"> 
+                        <h4 class="text-center" style="color: rgb(5, 114, 47);"><bold>LAPTOP CHÍNH HÃNG DELL GAMING G15 5511</bold></h4>
+                        <div class="products"> <img style="width: 100%" src="../image/LAPTOP/laptop-dell-gaming-g15-5511-588-1.jpg" alt=""> 
+                            <h5 class="text-center" style="color: rgb(5, 114, 47);">Intel Core I5-11320H / DDR4 8GB / PCIe 256G M.2 / RTX-3050 8G DDR6</h5>
+                            <h3 class="text-center" style="color: rgb(224, 61, 20);"> 26.300.000đ </h3>
+                            <button type="button" id="Mua_intel-E5-2673">Mua ngay</button>
+                            <button type="button" id="TG_intel-E5-2673">Trả góp</button>
+                        </div> 
+                </div> 
+                <div class="col-sm-7 col-md-3"> 
+                        <h4 class="text-center" style="color: rgb(5, 114, 47);"><bold>LAPTOP CHÍNH HÃNG DELL INSPIRON 15 3511 I3</bold></h4>
+                        <div class="products"> <img style="width: 100%" src="../image/LAPTOP/laptop-chinh-hang-dell-inspiron-15-3511-i3-586-1.jpg" alt=""> 
+                            <h5 class="text-center" style="color: rgb(5, 114, 47);">Intel Core I3-1115G4 / DDR4 4GB / PCIe 256G M.2 / VGA Onboard / 15,6 inch</h5>
+                            <h3 class="text-center" style="color: rgb(224, 61, 20);">14.900.000đ</h3>
+                            <button type="button" id="Mua_intel-E5-2673">Mua ngay</button>
+                            <button type="button" id="TG_intel-E5-2673">Trả góp</button>
+                        </div> 
+                </div> 
+                <div class="col-sm-7 col-md-3"> 
+                    <h4 class="text-center" style="color: rgb(5, 114, 47);"><bold>LAPTOP CHÍNH HÃNG DELL INSPIRON 3505</bold></h4>
+                    <div class="products"> <img style="width: 100%" src="../image/LAPTOP/laptop-chinh-hang-dell-inspiron-3505-585-1.jpg" alt=""> 
+                        <h5 class="text-center" style="color: rgb(5, 114, 47);">AMD R3 3250U / DDR4 8GB / PCIe 256G M.2 / VGA Onboard / 15,6 inch</h5>
+                        <h3 class="text-center" style="color: rgb(224, 61, 20);">15.200.000đ</h3>
+                        <button type="button" id="Mua_intel-E5-2673">Mua ngay</button>
+                        <button type="button" id="TG_intel-E5-2673">Trả góp</button>
+                    </div> 
+                </div>
+                <div class="col-sm-7 col-md-3"> 
+                    <h4 class="text-center" style="color: rgb(5, 114, 47);"><bold>LAPTOP CHÍNH HÃNG DELL VOSTRO 3510 I3</bold></h4>
+                    <div class="products"> <img style="width: 100%" src="../image/LAPTOP/laptop-chinh-hang-dell-vostro-3510-i3-584-1.jpg" alt=""> 
+                        <h5 class="text-center" style="color: rgb(5, 114, 47);">Intel Core I3-1115G4 / DDR4 8GB / PCIe 256G M.2 / VGA Onboard / 15,6 inch</h5>
+                        <h3 class="text-center" style="color: rgb(224, 61, 20);">15.500.000đ</h3>
+                        <button type="button" id="Mua_intel-E5-2673">Mua ngay</button>
+                        <button type="button" id="TG_intel-E5-2673">Trả góp</button>
+                    </div> 
+                </div>
+            </div> 
+    </div>
+    <div class="container">
+        <hr style="height:3px;border:none;background-color:#333;" />
+          <div class="row"> 
+                <div class="col-sm-7 col-md-3"> 
+                        <h4 class="text-center" style="color: rgb(5, 114, 47);"><bold>LAPTOP CHÍNH HÃNG DELL LATITUDE 3420 I5</bold></h4>
+                        <div class="products"> <img style="width: 100%" src="../image/LAPTOP/laptop-chinh-hang-dell-latitude-3420-i5-583-1.jpg" alt=""> 
+                            <h5 class="text-center" style="color: rgb(5, 114, 47);">Intel Core I5-1135G7 / DDR4 8GB / PCIe 256G M.2 /VGA Onboard / 14 inch</h5>
+                            <h3 class="text-center" style="color: rgb(224, 61, 20);"> 19.500.000đ </h3>
+                            <button type="button" id="Mua_intel-E5-2673">Mua ngay</button>
+                            <button type="button" id="TG_intel-E5-2673">Trả góp</button>
+                        </div> 
+                </div> 
+                <div class="col-sm-7 col-md-3"> 
+                        <h4 class="text-center" style="color: rgb(5, 114, 47);"><bold>LAPTOP CHÍNH HÃNG DELL INSPIRON 14 5402</bold></h4>
+                        <div class="products"> <img style="width: 100%" src="../image/LAPTOP/laptop-chinh-hang-dell-inspiron-14-5402-582-1.jpg" alt=""> 
+                            <h5 class="text-center" style="color: rgb(5, 114, 47);">Intel Core I5-1135G7 / DDR4 4GB / PCIe 256G M.2 / VGA Onboard / 14 inch</h5>
+                            <h3 class="text-center" style="color: rgb(224, 61, 20);">20.900.000đ</h3>
+                            <button type="button" id="Mua_intel-E5-2673">Mua ngay</button>
+                            <button type="button" id="TG_intel-E5-2673">Trả góp</button>
+                        </div> 
+                </div> 
+                <div class="col-sm-7 col-md-3"> 
+                    <h4 class="text-center" style="color: rgb(5, 114, 47);"><bold>LAPTOP CHÍNH HÃNG DELL INSPIRON 3505</bold></h4>
+                    <div class="products"> <img style="width: 100%" src="../image/LAPTOP/laptop-chinh-hang-dell-vostro-5410-580-1.jpg" alt=""> 
+                        <h5 class="text-center" style="color: rgb(5, 114, 47);">Intel Core I5-11320H / DDR4 8GB / 512G PCIe M.2 / VGA Onboard / 14 inch</h5>
+                        <h3 class="text-center" style="color: rgb(224, 61, 20);">22.100.000đ</h3>
+                        <button type="button" id="Mua_intel-E5-2673">Mua ngay</button>
+                        <button type="button" id="TG_intel-E5-2673">Trả góp</button>
+                    </div> 
+                </div>
+                <div class="col-sm-7 col-md-3"> 
+                    <h4 class="text-center" style="color: rgb(5, 114, 47);"><bold>LAPTOP CHÍNH HÃNG DELL INSPIRON 15 3511</bold></h4>
+                    <div class="products"> <img style="width: 100%" src="../image/LAPTOP/laptop-chinh-hang-dell-inspiron-15-3511-581-1.jpg" alt=""> 
+                        <h5 class="text-center" style="color: rgb(5, 114, 47);">Intel Core I5-1135G7 / DDR4 4GB512G / PCIe M.2 / VGA Onboard / 15,6 inch</h5>
+                        <h3 class="text-center" style="color: rgb(224, 61, 20);">19.500.000đ</h3>
+                        <button type="button" id="Mua_intel-E5-2673">Mua ngay</button>
+                        <button type="button" id="TG_intel-E5-2673">Trả góp</button>
+                    </div> 
+                </div>
+            </div> 
+            <button type="submit" class="btn btn-success" ><a href="" style="color: aliceblue;">Xem thêm >></a></button><br> 
+    </div><br>
+    <!-- Footer -->
+    <div class="col-md-12">
+        <footer class="container-fluid" style="background-color: rgb(73, 160, 47);color: black; text-align: center;">
+            <div class="col-md-12">
+                <h3>VỀ CHÚNG TÔI</h3>
+                <hr style="height:3px;border:none;color:#333;background-color:#333;" />
+                <p>Shop Máy Tính Giá Rẻ C&T</p>
+                <p>Hotline: 035.543.5331</p>
+                <p>Địa chỉ: 12 Nguyễn Văn Bảo - Phường 4 - Quận Gò Vấp - TP.HCM</p>
+                <hr style="height:3px;border:none;color:#333;background-color:#333;" />
+                <p>Copyright 2022 © Thiết kế Website bởi: Nguyễn Phương Cường & Nguyễn Thị Phương Thảo</p>
+            </div>      
+        </footer>
+    </div>
+
+    <div class="modal fade" id="logInModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="text-align: center;">Log In</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtUserName" class="control-label col-xs-3">UserName</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="txtUserName" placeholder="UserNamme">
+                                <span id="tbUserName" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass" class="control-label col-xs-3">PassWord</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="txtPass" placeholder="PassWord">
+                                <span id="tbPass" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg btn-block" id="btndangnhap">Đăng nhập</button> 
+                    </form>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
